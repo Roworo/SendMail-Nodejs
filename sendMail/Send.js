@@ -9,14 +9,14 @@ let Send = (req) => {
     var from = req.body.from;
     var subject = req.body.subject;
 
-    const authKey = process.env.FROM_ADDRESS;
+    const address = process.env.FROM_ADDRESS;
     const pass = process.env.PASS;
 
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'recibosLinkNuevo@gmail.com',
-            pass: 'AirlinesTag2021'
+            user: address,
+            pass: pass
         }
     });
 
